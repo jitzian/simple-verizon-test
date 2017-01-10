@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.0_aa8cf11d589dcdcb64121ba8121dc563e7596c8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="580fa73d5bf63ffd04b9d66d0e75a2ed21842702">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.6.0_3fa961aa6b70ff268d85aa8a8de14543d62f1a47/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="db0a4170961a16af6d7a5222bf90a5876eea4227">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.6.0_249cb8b9f50e26601a1e7fb51aac9b0b54f64aa5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_e75d378f55520eafb3c7bf5bf452328ffd775fb2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.0_56a47ad3d8775eba29acf3648f9548e26cd6306a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="533498c7fdec1208e682777aa9d41be0519982cc">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7f574f7cf51d147d0387f7d9e35b05f7476b99c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="de2c50f4a24277d22d675d598640da6d4622b14d">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.6.0_15e4fc110435138ef1ddcae19f28543293f93055/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding/0.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton.rxbinding-rxbinding-0.4.0_8145996160f3a54823a0fe58724c3e26b86f04a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_a67e747266c69475bf4c099c8564824ce7530ce9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_fb7efbfbf1f1232bb61fda0f6ee3086d524512c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_f2b819640bddda1a6291fd855b7ad0276b0c33d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_fdabd3285321802f888766477cfeaeff6a219c09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_ae9984ed3fa703810df36483d0ee4736c3010479/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f861fce2e9fa167e7fe8d8558cf2cbb910b9fb34">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.6.0_01bb885a7b3f9ba8423d4dc35bcb803ac1d555ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_c33fafa9524c3f2b4980a59df2119b0b836d7cc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_34be3dcb45af1de5ca2c2e3318b9cf715fed71e1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_07fe04ff5779131e69ecc76a25e62edd74d747d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.0_9e8e90bd2fc08abd90c9b30df23514b4230a4fb6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.0_3f60957b3c21a032d0c2f84a1df09e2d75783b44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_06531c680f24025609c062dbf646194b415b5433/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_fa896a13ccee83aa3518d9a9e22fceded1c45e0d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_586ad9509b60bb8a060d4a1b47da504018d33ac5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_2530b7dc21dca23c9524a550cf3bba539c979c6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5e651c1430cc9b8a3b3b5a9d92bb173214dfdf42">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.6.0_949fb98e5cc3531f7e47589c8b66f012c4dcd9cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_d896dda6bc8e17ba7a1a0454b681da8edc1e0ab1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_fc937cc6de516e0d843900be547bbdd86233a97d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding/0.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton.rxbinding-rxbinding-0.4.0_b57c05e0cef082c414b4bd41a15e53d0bbe02c7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_232f08ed96bd0e3a17c917a918ffaff6389140ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_f18cf79d9e7d7ae922b4f593c13e3a4305e1dab8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_41c61bf2a5bbba42ff5cd70be651befbd14def52/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7a343e17f154f513a09c12946fae0f172be079ec">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.6.0_7531ca2de1d0d6cf71b7df3fc46a381f7213d4d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_c20144f11fa4353098fe16876fdb648ec70f380b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_63787364ed59d81515a19d713adc88a5d1c51352/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_2f27010c8dab84b732bf564e6a08590f58d0a968/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="305caf90076c46bfd65f9a33ff7370251b6246ce">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_797da2a9bd271abc4170df05c07f7abd3198a52b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_47ab48a5a1edfa62b3fb29a449f7961590252220/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.0_30e53006835c6892da3c7046ebb5c1133cd6688a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.0_0b8fe1d46a754313a66c3f93c8ba2c613ef10a3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f861fce2e9fa167e7fe8d8558cf2cbb910b9fb34">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.6.0_b5abb1420440e6e212b50cda417a02cbe38a444a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_43a671e3fbcb8aa2e5d1c608beb408af1109086a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7a343e17f154f513a09c12946fae0f172be079ec">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.6.0_dc1f4b79580a7320de6a9e2c015e2345886af772/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_2bc70181065b35265acf64023772685efd350b9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_ecec37e53c58831120450417291d7bf7889cee96/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="de2c50f4a24277d22d675d598640da6d4622b14d">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.6.0_afa19298daef5b4d2b7130d1b5b8b56e7ef04763/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fe490ae938af91dd42df52ccee0ae05cc926e501">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ac435de2089927da1b010849e923700366e95097/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_63182dae7e0bd3461194c4fa322b5301b424e71e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5243af50631020511cf2403789678149b1a319e6">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.6.0_19e6d58e8dd0c040b58c707ba25608f66a01e559/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a9f41e6463de88c3f979d796382fc24fb7e9cd41">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.0_a872a122f58ade473318846d3944c8d6cba9fc72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a9f41e6463de88c3f979d796382fc24fb7e9cd41">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.0_26743a6c6fcc19d7403796a5aabb750c5ef35cd8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5e651c1430cc9b8a3b3b5a9d92bb173214dfdf42">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.6.0_caf1fa3b45b5e6906238045307cff3dde10a7490/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.0_21220a46caf4480e4d556140a376f337c5b53415/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="db0a4170961a16af6d7a5222bf90a5876eea4227">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.6.0_660b400a00dae2424ed8ec905a86617b96cbc25e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_b31b410720d9969469fb04a70a5274a53aae3451/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d39f676be8400123523882d189a1d84040d34339">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.0_653550ccfb99502ba3629865bbf6491d7f8a9e7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_686751c65a17b04680d50a0a39185e58c69a0358/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.0_2785d70fc46987259ce0b35e0d985876e906c2f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_52748fb7f1db45f3c06fc1445d6edc7834df154b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.0_a768ac02bfd8f367067f8de7a2a5ebfa96d67d8e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_06e3d3802603be07d5db38adfe7dcc8ae4aa9f44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_d569115cdcfdf8fa17b42b82e18b297942f94615/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="74d1712880eb2b4ab37ddf3c6a3232c883756726">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.0_638be16d264a9e2a790d39e9c6a9b43479cbea74/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.2.1_c1461ae13c34137295a7db8ae486f4a743115f77/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.2.1_b32f7883283b5849067a0b77f843341b5e9077ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="74d1712880eb2b4ab37ddf3c6a3232c883756726">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.0_8ed2c463ef52c85a0ac5d4003cfb5a30f06ae813/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.7/f60e4926b5f05a62ff73e73b6eb3a856cdc74ddb/dagger-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f60e4926b5f05a62ff73e73b6eb3a856cdc74ddb">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.7_d833f13bde73df36838e9dde70a13da38af08caf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_82ec73df64973ea154803d0d52d87a57a6aea3b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.1.0_824cc9b4a184287adf86655376d880de8475fcfc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d39f676be8400123523882d189a1d84040d34339">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.0_1e52f483f6de36e3f12b53f534a74641c42252e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bd11b3899f275668a9355f19cea2c2320f5f9d14">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.0_6ec7972da0f337884b947521380fa1c062fe535f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_2976afe93874a62acfc45bba30b759a00fa7dbda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4165421b6842d456cabfb00cee0fc8a928191bfe">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bfc86dd2f287ec0d95125b4630293186a916dccb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/simpleTest/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="580fa73d5bf63ffd04b9d66d0e75a2ed21842702">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.6.0_bc05cc4aea610a9d4507465b60a268c47db4a0c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/raian/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/www/androidStudioWS/simpleTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_f2045677e8c9510c53b20aff1c1c24701c0360c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_04e51dc767e920394bb73c118b3d6141017a98ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5243af50631020511cf2403789678149b1a319e6">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.6.0_e3e2912014f99f19e6dcf8a938de313b0e03bbea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bd11b3899f275668a9355f19cea2c2320f5f9d14">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.0_5b1bd71030f262da90b45a07d9ade19ab97a7071/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/www/androidStudioWS/jobTests/verizone/images-demo-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_a208db9fb5a1c9eb53a55e75d5b265552661db22/classes.dex" />
+    </item>
+
+</items>

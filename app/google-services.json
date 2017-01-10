@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "697927731203",
+    "firebase_url": "https://creditofamiliar-a6df1.firebaseio.com",
+    "project_id": "creditofamiliar-a6df1",
+    "storage_bucket": "creditofamiliar-a6df1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697927731203:android:0dd1c3c9a6012248",
+        "android_client_info": {
+          "package_name": "net.simplifiedcoding.firebaseauthdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697927731203-3jcdf92v27gpj68jufojfuoc0ev0pj5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhwViHpbWlvupY9G9T_V5ukq0Y0D4q_U0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697927731203:android:3e5d99db2a89cf3c",
+        "android_client_info": {
+          "package_name": "mac.training.android.com.org.materialdesignbasic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697927731203-3jcdf92v27gpj68jufojfuoc0ev0pj5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhwViHpbWlvupY9G9T_V5ukq0Y0D4q_U0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

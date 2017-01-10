@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "mac.training.android.com.org.materialdesignbasic"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext {
+    versionSupportLibrary = "25.1.0"
+    retrofitVersionLib = "2.1.0"
+    daggerVersionLib = "2.7"
+    butterKnifeVersionLib = "8.4.0"
+    rxVersionLib = "0.4.0"
+    glideVersionLib = "3.7.0"
+    eventBusVersionLib = "3.0.0"
+    fireBaseVersionLib = "9.6.0"//10.0.1 -> Not working with this version (BUG)
+
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile 'junit:junit:4.12'
+
+    //RecyclerView
+    compile "com.android.support:appcompat-v7:${versionSupportLibrary}"
+    compile "com.android.support:recyclerview-v7:${versionSupportLibrary}"
+    compile "com.android.support:cardview-v7:${versionSupportLibrary}"
+    compile "com.android.support:design:${versionSupportLibrary}"
+    compile "com.android.support:support-v4:${versionSupportLibrary}"
+
+    //Glide
+    compile "com.github.bumptech.glide:glide:${glideVersionLib}"
+
+    //Retrofit
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersionLib}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitVersionLib}"
+
+    //RxBinding
+    compile "com.jakewharton.rxbinding:rxbinding:${rxVersionLib}"
+
+    //Butterknife
+    compile "com.jakewharton:butterknife:${butterKnifeVersionLib}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterKnifeVersionLib}"
+
+    //RXJava
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //Firebase
+    compile "com.google.firebase:firebase-auth:${fireBaseVersionLib}"
+    compile "com.google.firebase:firebase-storage:${fireBaseVersionLib}"
+    compile "com.google.firebase:firebase-database:${fireBaseVersionLib}"
+
+    //EventBus
+    compile "org.greenrobot:eventbus:${eventBusVersionLib}"
+
+    //Dagger
+    compile "com.google.dagger:dagger:${daggerVersionLib}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersionLib}"
+
+    //Adding Library Floating Fabs
+    compile project(':library')
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'
