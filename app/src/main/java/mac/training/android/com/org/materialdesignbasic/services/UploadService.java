@@ -32,17 +32,12 @@ public class UploadService extends BaseTaskService{
     private static final String TAG = UploadService.class.getSimpleName();
     private static final int NOTIF_ID_DOWNLOAD = 0;
 
-    // [START declare_ref]
     private StorageReference mStorageRef;
-    // [END declare_ref]
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        // [START get_storage_ref]
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        // [END get_storage_ref]
     }
 
     @Nullable
@@ -88,11 +83,9 @@ public class UploadService extends BaseTaskService{
                         // Get the public download URL
                         Uri downloadUri = taskSnapshot.getMetadata().getDownloadUrl();
 
-                        // [START_EXCLUDE]
                         broadcastUploadFinished(downloadUri, fileUri);
                         showUploadFinishedNotification(downloadUri, fileUri);
                         taskCompleted();
-                        // [END_EXCLUDE]
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -101,11 +94,9 @@ public class UploadService extends BaseTaskService{
                         // Upload failed
                         Log.w(TAG, "uploadFromUri:onFailure", exception);
 
-                        // [START_EXCLUDE]
                         broadcastUploadFinished(null, fileUri);
                         showUploadFinishedNotification(null, fileUri);
                         taskCompleted();
-                        // [END_EXCLUDE]
                     }
                 });
     }
