@@ -1,6 +1,7 @@
 package mac.training.android.com.org.materialdesignbasic.component;
 
 import dagger.Component;
+import mac.training.android.com.org.materialdesignbasic.fragments.GridPhotoFragment;
 import mac.training.android.com.org.materialdesignbasic.fragments.PhotoFragment;
 import mac.training.android.com.org.materialdesignbasic.module.NetModule;
 
@@ -11,4 +12,5 @@ import mac.training.android.com.org.materialdesignbasic.module.NetModule;
 @Component(modules = {NetModule.class})
 public interface NetComponent {
     void inject(PhotoFragment photoFragment);
+    void inject(GridPhotoFragment gridPhotoFragment);
 }

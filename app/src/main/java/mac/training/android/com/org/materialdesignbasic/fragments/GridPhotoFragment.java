@@ -15,10 +15,22 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mac.training.android.com.org.materialdesignbasic.R;
+import mac.training.android.com.org.materialdesignbasic.RetrofitRest.RestService;
 import mac.training.android.com.org.materialdesignbasic.adapter.GridViewAdapter;
+import mac.training.android.com.org.materialdesignbasic.component.DaggerNetComponent;
+import mac.training.android.com.org.materialdesignbasic.constans.AppConstants;
+import mac.training.android.com.org.materialdesignbasic.model.Result;
+import mac.training.android.com.org.materialdesignbasic.module.NetModule;
+import retrofit2.Retrofit;
+import rx.Observable;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,28 +58,14 @@ public class GridPhotoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    //Use of dagger injection to make use of retrofit
+    @Inject
+    Retrofit retrofit;
+
     private OnFragmentInteractionListener mListener;
 
     public GridPhotoFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GridPhotoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GridPhotoFragment newInstance(String param1, String param2) {
-        GridPhotoFragment fragment = new GridPhotoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
@@ -88,26 +86,60 @@ public class GridPhotoFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_grid_photo, container, false);
         ButterKnife.bind(this, rootView);
 
-        mGridView.setAdapter(new GridViewAdapter(getContext()));
-        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String imageURL = (String) view.getTag();
-                Log.d(TAG, "*****Click to Launch Detail::" + imageURL);
-//                DetailActivity.launch(HomeActivity.this, view.findViewById(R.id.image), url);
-                Fragment fragment = new DetailGridPhotoFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("imageURL", imageURL);
-                fragment.setArguments(bundle);
+        //Injection of Retrofit
+        DaggerNetComponent.builder()
+                .netModule(new NetModule(AppConstants.baseURL))
+                .build()
+                .inject(this);
 
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(TAG)
-                        .replace(R.id.container_body, fragment, "DetailGridPhotoFragment")
-                        .commit();
+        RestService restService = retrofit.create(RestService.class);
 
-            }
-        });
+        //Use of RXJava to consume Rest Service
+        Observable<Result> resultObservable = restService.getPhotos(AppConstants.method,
+                AppConstants.API_KEY,
+                "10",
+                AppConstants.format,
+                AppConstants.callBack);
+
+        resultObservable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Result>() {
+                    @Override
+                    public void onCompleted() {
+                        Log.d(TAG, "onCompleted");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d(TAG, "onError::" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onNext(Result result) {
+                        //If OK so get the info and set the adapter with the retrieved data
+                        Log.d(TAG, "onNext::" + result.getPhotos().getPhoto().size());
+                        mGridView.setAdapter(new GridViewAdapter(getContext(), result.getPhotos().getPhoto()));
+                        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                String imageURL = (String) view.getTag();
+                                Log.d(TAG, "*****Click to Launch Detail::" + imageURL);
+                                Fragment fragment = new DetailGridPhotoFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putString("imageURL", imageURL);
+                                fragment.setArguments(bundle);
+
+                                //Once the user clicks over one image we go to another fragment and display detail
+                                //It is necessary to add it to the basckstack so the user can come back on backpressed
+                                getFragmentManager()
+                                        .beginTransaction()
+                                        .addToBackStack(TAG)
+                                        .replace(R.id.container_body, fragment, "DetailGridPhotoFragment")
+                                        .commit();
+                            }
+                        });
+                    }
+                });
 
         mDrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 

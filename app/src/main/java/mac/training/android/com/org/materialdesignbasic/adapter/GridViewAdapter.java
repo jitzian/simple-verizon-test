@@ -26,6 +26,11 @@ public class GridViewAdapter extends BaseAdapter{
     private Context context;
     private List<Photo> lstRes;
 
+    public GridViewAdapter(Context context, List<Photo> lstRes) {
+        this.context = context;
+        this.lstRes = lstRes;
+    }
+
     public GridViewAdapter(Context context) {
         this.context = context;
     }
