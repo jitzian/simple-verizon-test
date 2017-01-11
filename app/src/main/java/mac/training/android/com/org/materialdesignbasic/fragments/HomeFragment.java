@@ -38,6 +38,12 @@ import static android.app.Activity.RESULT_OK;
  * to handle interaction events.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ *
+ * This fragment is an introduction of the app that can be customized to provide context
+ * about the functionality
+ *
+ *
  */
 public class HomeFragment extends Fragment {
     private static final String TAG = HomeFragment.class.getName();

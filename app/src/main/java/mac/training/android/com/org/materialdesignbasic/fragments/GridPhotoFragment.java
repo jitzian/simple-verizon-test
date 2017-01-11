@@ -39,6 +39,12 @@ import rx.schedulers.Schedulers;
  * to handle interaction events.
  * Use the {@link GridPhotoFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ *
+ *
+ * This fragment displays images into a GridView
+ * Once an specific image is selected, it'll be displayed into the DetailGridPhotoFrfagment
+ *
  */
 public class GridPhotoFragment extends Fragment {
     private static final String TAG = GridPhotoFragment.class.getSimpleName();

@@ -10,6 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by raian on 1/9/17.
+ *
+ * Dagger: Provide an injection of Retrofit instance to consume REST API
+ *
  */
 
 @Module

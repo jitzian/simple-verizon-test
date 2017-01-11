@@ -26,12 +26,20 @@ import mac.training.android.com.org.materialdesignbasic.singleton.FirebaseOAuth;
 
 /**
  * Created by raian on 1/9/17.
+ *
+ * Login Activity
+ *
+ * uss: user@test.com
+ * pss: 123456
+ *
+ * The authentication is performed via FirebaseOAuth
+ *
+ * For now the email authentication is the only one that is available
+ *
  */
 
 
-public class EmailPasswordActivity extends BaseActivity
-//        implements View.OnClickListener
-    {
+public class EmailPasswordActivity extends BaseActivity {
     private static final String TAG = EmailPasswordActivity.class.getSimpleName();
 
     @BindView(R.id.mStatusTextView)
@@ -64,11 +72,8 @@ public class EmailPasswordActivity extends BaseActivity
             }
         });
 
-        // [START initialize_auth]
         FirebaseOAuth.getInstance(this).mAuth = FirebaseAuth.getInstance();
-        // [END initialize_auth]
 
-        // [START auth_state_listener]
         FirebaseOAuth.getInstance(this).mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -81,23 +86,18 @@ public class EmailPasswordActivity extends BaseActivity
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-                // [START_EXCLUDE]
                 updateUI(user);
-                // [END_EXCLUDE]
             }
         };
-        // [END auth_state_listener]
     }
 
-    // [START on_start_add_listener]
+
     @Override
     public void onStart() {
         super.onStart();
         FirebaseOAuth.getInstance(this).mAuth.addAuthStateListener(FirebaseOAuth.getInstance(this).mAuthListener);
     }
-    // [END on_start_add_listener]
 
-    // [START on_stop_remove_listener]
     @Override
     public void onStop() {
         super.onStop();
@@ -105,7 +105,6 @@ public class EmailPasswordActivity extends BaseActivity
             FirebaseOAuth.getInstance(this).mAuth.removeAuthStateListener(FirebaseOAuth.getInstance(this).mAuthListener);
         }
     }
-    // [END on_stop_remove_listener]
 
     private void createAccount(String email, String password) {
         Log.d(TAG, "createAccount:" + email);
@@ -115,7 +114,6 @@ public class EmailPasswordActivity extends BaseActivity
 
         showProgressDialog();
 
-        // [START create_user_with_email]
         FirebaseOAuth.getInstance(this).mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -130,12 +128,9 @@ public class EmailPasswordActivity extends BaseActivity
                                     Toast.LENGTH_SHORT).show();
                         }
 
-                        // [START_EXCLUDE]
                         hideProgressDialog();
-                        // [END_EXCLUDE]
                     }
                 });
-        // [END create_user_with_email]
     }
 
     private void signIn(String email, String password) {
@@ -162,12 +157,10 @@ public class EmailPasswordActivity extends BaseActivity
                                     Toast.LENGTH_SHORT).show();
                         }
 
-                        // [START_EXCLUDE]
                         if (!task.isSuccessful()) {
                             mStatusTextView.setText(R.string.auth_failed);
                         }
                         hideProgressDialog();
-                        // [END_EXCLUDE]
                     }
                 });
         // [END sign_in_with_email]
@@ -230,8 +223,5 @@ public class EmailPasswordActivity extends BaseActivity
         if (i == R.id.email_sign_in_button) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
         }
-// else if (i == R.id.sign_out_button) {
-//            signOut();
-//        }
     }
 }

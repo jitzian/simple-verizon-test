@@ -25,6 +25,10 @@ import mac.training.android.com.org.materialdesignbasic.R;
  * to handle interaction events.
  * Use the {@link DetailGridPhotoFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * This fragment displays the selected image from the GridPhotoFragment
+ *
+ *
  */
 public class DetailGridPhotoFragment extends Fragment {
     private static final String TAG = DetailGridPhotoFragment.class.getSimpleName();

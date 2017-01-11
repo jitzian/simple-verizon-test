@@ -44,6 +44,13 @@ import mac.training.android.com.org.materialdesignbasic.singleton.FirebaseOAuth;
  * to handle interaction events.
  * Use the {@link UploadImageFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * This fragment is not finished yet. But the purpose of it is to upload imaged into FirebaseStorage
+ * What is completed is the upload of the image into Firebase.
+ *
+ * The next step is to get the URL and display the image into the PhotoFragment
+ *
+ *
  */
 public class UploadImageFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match

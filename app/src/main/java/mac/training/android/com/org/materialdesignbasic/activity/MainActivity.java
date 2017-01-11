@@ -21,6 +21,14 @@ import mac.training.android.com.org.materialdesignbasic.fragments.HomeFragment;
 import mac.training.android.com.org.materialdesignbasic.fragments.UploadImageFragment;
 import mac.training.android.com.org.materialdesignbasic.singleton.FirebaseOAuth;
 
+/**
+ * Created by raian on 1/9/17.
+
+ * MainActivity: In charge of create all the Application Layout
+ *
+ * */
+
+
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
     private static final String TAG = MainActivity.class.getName();
     @BindView(R.id.mToolbar)

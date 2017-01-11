@@ -68,8 +68,10 @@ public class GridViewAdapter extends BaseAdapter{
                 .load(imageUrl)
                 .into(image);
 
-        TextView text = (TextView) view.findViewById(R.id.text);
-        text.setText(getItem(i).toString());
+        TextView text = (TextView) view.findViewById(R.id.mGridText);
+//        text.setText(getItem(i).toString());
+
+        text.setText(lstRes.get(i).getOwner());
 
         return view;
     }

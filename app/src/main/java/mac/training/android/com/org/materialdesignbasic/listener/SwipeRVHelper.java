@@ -16,6 +16,10 @@ import mac.training.android.com.org.materialdesignbasic.adapter.RVAdapter;
 
 /**
  * Created by raian on 1/9/17.
+ *
+ * This class implements the functionality for the right swiping action to delete images from the
+ * RecyclerView where them are displayed
+ *
  */
 
 public class SwipeRVHelper {

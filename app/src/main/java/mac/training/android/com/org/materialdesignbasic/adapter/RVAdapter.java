@@ -26,6 +26,10 @@ import mac.training.android.com.org.materialdesignbasic.model.Result;
 
 /**
  * Created by raian on 1/9/17.
+ *
+ * This adapter is used to display images consumed by Flickr API into a RecyclerView
+ * with right swipe functionality
+ *
  */
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder>{

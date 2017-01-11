@@ -39,6 +39,11 @@ import rx.schedulers.Schedulers;
  * to handle interaction events.
  * Use the {@link PhotoFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * With this fragment I display the images into a RecyclerView
+ * I'm consuming Flickr API, but I'll change this to consume FirebaseStorage
+ *
+ *
  */
 public class PhotoFragment extends Fragment {
     private static final String TAG = PhotoFragment.class.getName();

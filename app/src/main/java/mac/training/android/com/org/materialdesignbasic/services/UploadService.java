@@ -26,6 +26,9 @@ import mac.training.android.com.org.materialdesignbasic.constans.AppConstants;
 
 /**
  * Created by raian on 1/9/17.
+ *
+ * This Service uploads the images from the device to FirebaseStorage
+ *
  */
 
 public class UploadService extends BaseTaskService{
@@ -60,16 +63,12 @@ public class UploadService extends BaseTaskService{
     private void uploadFromUri(final Uri fileUri) {
         Log.d(TAG, "uploadFromUri:src:" + fileUri.toString());
 
-        // [START_EXCLUDE]
         taskStarted();
         showUploadProgressNotification();
-        // [END_EXCLUDE]
 
-        // [START get_child_ref]
         // Get a reference to store file at photos/<FILENAME>.jpg
         final StorageReference photoRef = mStorageRef.child("photos")
                 .child(fileUri.getLastPathSegment());
-        // [END get_child_ref]
 
         // Upload file to Firebase Storage
         Log.d(TAG, "uploadFromUri:dst:" + photoRef.getPath());
