@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,6 +59,16 @@ public class EmailPasswordActivity extends BaseActivity {
     @BindView(R.id.email_sign_in_button)
     Button email_sign_in_button;
 
+    //Firebase
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
+
+    // [START declare_auth_listener]
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    // [END declare_auth_listener]
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,39 +84,48 @@ public class EmailPasswordActivity extends BaseActivity {
             }
         });
 
-        FirebaseOAuth.getInstance(this).mAuth = FirebaseAuth.getInstance();
+        // [START initialize_auth]
+        mAuth = FirebaseAuth.getInstance();
+        // [END initialize_auth]
 
-        FirebaseOAuth.getInstance(this).mAuthListener = new FirebaseAuth.AuthStateListener() {
+        // [START auth_state_listener]
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getEmail());
                     startActivity(new Intent(EmailPasswordActivity.this, MainActivity.class));
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
+                // [START_EXCLUDE]
                 updateUI(user);
+                // [END_EXCLUDE]
             }
         };
+        // [END auth_state_listener]
     }
 
-
+    // [START on_start_add_listener]
     @Override
     public void onStart() {
         super.onStart();
-        FirebaseOAuth.getInstance(this).mAuth.addAuthStateListener(FirebaseOAuth.getInstance(this).mAuthListener);
+        mAuth.addAuthStateListener(mAuthListener);
     }
+    // [END on_start_add_listener]
 
+    // [START on_stop_remove_listener]
     @Override
     public void onStop() {
         super.onStop();
-        if (FirebaseOAuth.getInstance(this).mAuthListener != null) {
-            FirebaseOAuth.getInstance(this).mAuth.removeAuthStateListener(FirebaseOAuth.getInstance(this).mAuthListener);
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
+    // [END on_stop_remove_listener]
 
     private void createAccount(String email, String password) {
         Log.d(TAG, "createAccount:" + email);
@@ -114,7 +135,8 @@ public class EmailPasswordActivity extends BaseActivity {
 
         showProgressDialog();
 
-        FirebaseOAuth.getInstance(this).mAuth.createUserWithEmailAndPassword(email, password)
+        // [START create_user_with_email]
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -128,9 +150,12 @@ public class EmailPasswordActivity extends BaseActivity {
                                     Toast.LENGTH_SHORT).show();
                         }
 
+                        // [START_EXCLUDE]
                         hideProgressDialog();
+                        // [END_EXCLUDE]
                     }
                 });
+        // [END create_user_with_email]
     }
 
     private void signIn(String email, String password) {
@@ -142,7 +167,7 @@ public class EmailPasswordActivity extends BaseActivity {
         showProgressDialog();
 
         // [START sign_in_with_email]
-        FirebaseOAuth.getInstance(this).mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -157,17 +182,19 @@ public class EmailPasswordActivity extends BaseActivity {
                                     Toast.LENGTH_SHORT).show();
                         }
 
+                        // [START_EXCLUDE]
                         if (!task.isSuccessful()) {
                             mStatusTextView.setText(R.string.auth_failed);
                         }
                         hideProgressDialog();
+                        // [END_EXCLUDE]
                     }
                 });
         // [END sign_in_with_email]
     }
 
     private void signOut() {
-        FirebaseOAuth.getInstance(this).mAuth.signOut();
+        mAuth.signOut();
         updateUI(null);
     }
 
@@ -223,5 +250,8 @@ public class EmailPasswordActivity extends BaseActivity {
         if (i == R.id.email_sign_in_button) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
         }
+// else if (i == R.id.sign_out_button) {
+//            signOut();
+//        }
     }
 }

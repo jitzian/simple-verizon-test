@@ -17,14 +17,16 @@ public class Post {
     public String author;
     public String reference;
     public String observations;
+    public String imgURL;
 
     public Map<String, Boolean>stars = new HashMap<>();
 
-    public Post(String uid, String author, String reference, String observations) {
+    public Post(String uid, String author, String reference, String observations, String imgURL) {
         this.uid = uid;
         this.author = author;
         this.reference = reference;
         this.observations = observations;
+        this.imgURL = imgURL;
     }
 
     @Exclude
@@ -34,6 +36,7 @@ public class Post {
         result.put("author", author);
         result.put("reference", reference);
         result.put("observations", observations);
+        result.put("imgURL", imgURL);
 
         return result;
     }

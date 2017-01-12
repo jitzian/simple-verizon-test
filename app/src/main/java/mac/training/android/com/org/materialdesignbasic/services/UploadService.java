@@ -31,16 +31,22 @@ import mac.training.android.com.org.materialdesignbasic.constans.AppConstants;
  *
  */
 
+
 public class UploadService extends BaseTaskService{
     private static final String TAG = UploadService.class.getSimpleName();
     private static final int NOTIF_ID_DOWNLOAD = 0;
 
+    // [START declare_ref]
     private StorageReference mStorageRef;
+    // [END declare_ref]
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // [START get_storage_ref]
         mStorageRef = FirebaseStorage.getInstance().getReference();
+        // [END get_storage_ref]
     }
 
     @Nullable
@@ -66,6 +72,7 @@ public class UploadService extends BaseTaskService{
         taskStarted();
         showUploadProgressNotification();
 
+        // get_child_ref
         // Get a reference to store file at photos/<FILENAME>.jpg
         final StorageReference photoRef = mStorageRef.child("photos")
                 .child(fileUri.getLastPathSegment());
@@ -106,7 +113,11 @@ public class UploadService extends BaseTaskService{
      */
     private boolean broadcastUploadFinished(@Nullable Uri downloadUrl, @Nullable Uri fileUri) {
         boolean success = downloadUrl != null;
-        Log.d(TAG, "broadcastUploadFinished");
+        Log.d(TAG, "downloadUrl:: -> " + downloadUrl);
+        Log.d(TAG, "downloadUrl:: -> " + AppConstants.EXTRA_DOWNLOAD_URL);
+
+        Log.d(TAG, "fileUri:: -> " + fileUri);
+        Log.d(TAG, "fileUri:: -> " + AppConstants.EXTRA_FILE_URI);
 
         String action = success ? AppConstants.UPLOAD_COMPLETED : AppConstants.UPLOAD_ERROR;
 

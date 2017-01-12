@@ -20,21 +20,26 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mac.training.android.com.org.materialdesignbasic.R;
 import mac.training.android.com.org.materialdesignbasic.constans.AppConstants;
 import mac.training.android.com.org.materialdesignbasic.image.picker.ImagePicker;
+import mac.training.android.com.org.materialdesignbasic.model.Post;
 import mac.training.android.com.org.materialdesignbasic.model.User;
 import mac.training.android.com.org.materialdesignbasic.services.UploadService;
-import mac.training.android.com.org.materialdesignbasic.singleton.FirebaseDataBase;
 import mac.training.android.com.org.materialdesignbasic.singleton.FirebaseOAuth;
 
 /**
@@ -88,33 +93,18 @@ public class UploadImageFragment extends Fragment {
 
     private BroadcastReceiver mBroadcastReceiver;
 
-
     //Uri's
-    private Uri mDownloadUrl = null;
+    private Uri downloadUrl = null;
     private Uri mFileUri = null;
+
+    private DatabaseReference mDatabase;
+
 
 
     public UploadImageFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UploadImageFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static UploadImageFragment newInstance(String param1, String param2) {
-        UploadImageFragment fragment = new UploadImageFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,6 +114,24 @@ public class UploadImageFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+    }
+
+    public boolean validateInputs(){
+        Log.d(TAG, "validateInputs");
+        if((mEditTextReference.getText().toString().length() > 0)
+                && (mEditTextObservation.getText().toString().length() > 0)
+                && isImageSelected) {
+            Log.d(TAG, "-" + mEditTextReference.getText());
+            Log.d(TAG, "-" + mEditTextObservation.getText());
+            Log.d(TAG, "-" + mImageViewLoad.getDrawable() + " - " + mImageViewLoad.getHeight() + " - " + mImageViewLoad.getWidth());
+            Log.d(TAG, "-" + isImageSelected);
+            Log.d(TAG, "COMPLETE");
+            return true;
+        }
+        else{
+            Log.d(TAG, "INCOMPLETE");
+            return false;
+        }
     }
 
     @Override
@@ -136,6 +144,7 @@ public class UploadImageFragment extends Fragment {
 
         //Bind controls from the view
         ButterKnife.bind(this, rootView);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         fabLoadImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,14 +158,21 @@ public class UploadImageFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "uploadImage");
-                uploadImage();
+                if(validateInputs()){
+                    uploadImage();
+//                    submitPost();
+                }else{
+                    Toast.makeText(getContext(), "Please provide the necessary inputs in order to save the record..", Toast.LENGTH_LONG).show();
+                }
+
+//                uploadImage();
             }
         });
 
         // Restore instance state
         if (savedInstanceState != null) {
             mFileUri = savedInstanceState.getParcelable(AppConstants.KEY_FILE_URI);
-            mDownloadUrl = savedInstanceState.getParcelable(AppConstants.KEY_DOWNLOAD_URL);
+            downloadUrl = savedInstanceState.getParcelable(AppConstants.KEY_DOWNLOAD_URL);
         }
 
         onNewIntent(getActivity().getIntent());
@@ -189,10 +205,11 @@ public class UploadImageFragment extends Fragment {
                         Log.d(TAG, "Upload was OK:");
 
                         Bundle bundle = intent.getExtras();
-                        Uri downloadUrl = (Uri) bundle.get("extra_download_url");
+                        downloadUrl = (Uri) bundle.get(AppConstants.EXTRA_DOWNLOAD_URL);
                         if (downloadUrl != null) {
-                            Log.d(TAG, "::downloadUrl::" + downloadUrl.getPath());
+                            Log.d(TAG, "::downloadUrl::" + downloadUrl);
                         }
+                        submitPost();
 
                         break;
                     case AppConstants.UPLOAD_ERROR:
@@ -232,10 +249,10 @@ public class UploadImageFragment extends Fragment {
     private void onUploadResultIntent(Intent intent) {
         Log.d(TAG, "onUploadResultIntent");
         // Got a new intent from MyUploadService with a success or failure
-        mDownloadUrl = intent.getParcelableExtra(AppConstants.EXTRA_DOWNLOAD_URL);
+        downloadUrl = intent.getParcelableExtra(AppConstants.EXTRA_DOWNLOAD_URL);
         mFileUri = intent.getParcelableExtra(AppConstants.EXTRA_FILE_URI);
 
-        Log.d(TAG, "onUploadResultIntent::mDownloadUrl" + mDownloadUrl.toString());
+        Log.d(TAG, "onUploadResultIntent::mDownloadUrl" + downloadUrl.toString());
 
         updateUI(FirebaseOAuth.mAuth.getCurrentUser());
     }
@@ -325,7 +342,7 @@ public class UploadImageFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    private static boolean isImageSelected;
+    private static boolean isImageSelected = false;
     private static Uri uri;
 
     public void loadImgFromPhoneGallery(View view) {
@@ -364,25 +381,41 @@ public class UploadImageFragment extends Fragment {
     }
 
     //This method saves into de DB
-    final String userId = FirebaseOAuth.getInstance(getContext()).getUid();
     public void submitPost(){
         Log.d(TAG, "saveIntoDataBase");
-        FirebaseDataBase.getmDatabaseReference().child("post").child(FirebaseOAuth.getInstance(getContext()).getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+        final String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Log.d(TAG, "saveIntoDataBase::userId::" + userId);
+
+        mDatabase.child("users").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d(TAG, "onDataChange");
-                User user = dataSnapshot.getValue(User.class);
+                Log.d(TAG, "onDataChange::dataSnapshot" + dataSnapshot);
+//                User user = dataSnapshot.getValue(User.class);
 
-                if(user == null){
-                    Log.e(TAG, "User " + userId + "null");
+                FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                User user = new User(firebaseUser.getUid(), firebaseUser.getEmail());
+                Log.d(TAG, "::onDataChange::dataSnapshot::" + dataSnapshot + ":user:" + user);
+
+                Log.d(TAG, "::firebaseUser::" + firebaseUser);
+                if(firebaseUser == null){
+                    Log.e(TAG, "User " + userId + " is null");
                     Toast.makeText(getContext(),
                             "Error: could not fetch user.",
                             Toast.LENGTH_LONG).show();
                 }else{
+                    Log.d(TAG, "Lets go to save the post");
+                    Log.d(TAG, "userId::" + userId);
+                    Log.d(TAG, "user.username::" + user.username);
+                    Log.d(TAG, "mEditTextReference.getText().toString()::" + mEditTextReference.getText().toString());
+                    Log.d(TAG, "mEditTextObservation.getText().toString()::" + mEditTextObservation.getText().toString());
+                    Log.d(TAG, "mDownloadUrl.toString()::" + downloadUrl);
                     writeNewPost(userId,
                             user.username,
                             mEditTextReference.getText().toString(),
-                            mEditTextObservation.getText().toString());
+                            mEditTextObservation.getText().toString(),
+                            downloadUrl.toString()
+                    );
+
                 }
 
             }
@@ -395,11 +428,18 @@ public class UploadImageFragment extends Fragment {
         });
     }
 
-    public void writeNewPost(String userId, String username, String title, String body){
+    public void writeNewPost(String userId, String username, String reference, String observations, String imgURL){
         Log.d(TAG, "newPost");
 
-        String key = FirebaseDataBase.getmDatabaseReference().child("posts").push().getKey();
+        String key = mDatabase.child("posts").push().getKey();
+        Post post = new Post(userId, username, reference, observations, imgURL);
+        Map<String, Object>postValues = post.toMap();
 
+        Map<String, Object> childUpdates = new HashMap<>();
+        childUpdates.put("/posts/" + key, postValues);
+        childUpdates.put("/user-posts/" + userId + "/" + key, postValues);
+
+        mDatabase.updateChildren(childUpdates);
 
     }
 

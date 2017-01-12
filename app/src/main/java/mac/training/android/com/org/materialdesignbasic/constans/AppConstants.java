@@ -3,7 +3,7 @@ package mac.training.android.com.org.materialdesignbasic.constans;
 /**
  * Created by raian on 1/9/17.
  *
- * This class is only for constants and it is used along the app
+ * This class is only for constants
  *
  */
 
@@ -43,5 +43,6 @@ public class AppConstants {
 
     //Sports
     public static String imageUrl = "http://lorempixel.com/800/600/sports/";
+
 
 }

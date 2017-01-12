@@ -16,7 +16,7 @@ public class FirebaseOAuth {
     private static Context context;
 
     //Firebase Vars
-    public static FirebaseAuth mAuth;
+    public static FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public static FirebaseAuth.AuthStateListener mAuthListener;
 
     public FirebaseOAuth(Context context){

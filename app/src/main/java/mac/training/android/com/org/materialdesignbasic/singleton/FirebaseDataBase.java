@@ -13,7 +13,7 @@ public class FirebaseDataBase {
     private static final String TAG = FirebaseDataBase.class.getSimpleName();
     private static FirebaseDataBase instance = null;
     private static Context context;
-    public static DatabaseReference mDatabaseReference;
+    public static DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
     public FirebaseDataBase(Context context){
         this.context = context;

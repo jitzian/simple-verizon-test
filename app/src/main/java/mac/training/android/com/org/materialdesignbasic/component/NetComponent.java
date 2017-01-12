@@ -13,4 +13,5 @@ import mac.training.android.com.org.materialdesignbasic.module.NetModule;
 public interface NetComponent {
     void inject(PhotoFragment photoFragment);
     void inject(GridPhotoFragment gridPhotoFragment);
+
 }

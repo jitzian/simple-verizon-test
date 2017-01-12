@@ -8,9 +8,6 @@ import rx.Observable;
 
 /**
  * Created by raian on 1/9/17.
- *
- * Interface defined to consume REST Service from Flickr
- *
  */
 
 public interface RestService {
